@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('prueba','test',['numero' => 10 ]);
+
+Route::get('prueba2', function ($numero = 10) {
+    return $numero;
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
